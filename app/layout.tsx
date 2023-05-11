@@ -1,5 +1,5 @@
 import '@/styles/global.scss'
-import {layout} from '@/styles/layout.module.scss'
+import styles from '@/styles/layout.module.scss'
 import { Fira_Code } from 'next/font/google'
 import {Header} from "@/components/Core/Header";
 import {Burger} from "@/components/Core/Burger";
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className={layout} lang="en">
+    <html className={styles.layout} lang="en">
       <body className={firaCode.className}>
       <Header />
       <main>
