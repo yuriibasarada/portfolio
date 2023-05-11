@@ -1,0 +1,175 @@
+@keyframes cloudMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100vw + 100%));
+  }
+}
+.homeWrapper {
+  position: relative;
+  height: 100%;
+  .land {
+    position: absolute;
+    bottom: 100px;
+    right: -30px;
+  }
+  .cloud1 {
+    position: absolute;
+    right: 100%;
+    z-index: 0;
+    top: -75px;
+    animation: cloudMove 20s linear infinite;
+  }
+  .cloud2 {
+    position: absolute;
+    bottom: 100px;
+    z-index: 0;
+    animation: cloudMove 15s linear infinite;
+    animation-delay: 5s;
+    right: 100%;
+  }
+  > .home {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+.detail {
+  margin-top: 90px;
+  z-index: 1;
+  > img {
+    position: absolute;
+    left: -50px;
+    z-index: 1;
+  }
+
+
+  > h1 {
+    z-index: 2;
+    position: relative;
+    font-size: $subHeadline;
+    color: #E5E9F0;
+  }
+
+  > h2 {
+    z-index: 2;
+    position: relative;
+    font-weight: 400;
+    font-size: 65px;
+    min-height: 85px;
+  }
+
+  > h3 {
+    font-size: $headline;
+    color: $purpleVs;
+    margin-bottom: 25px;
+  }
+  p {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+    &.comment {
+      margin-bottom: 10px;
+      color: $grey;
+      &.pressX {
+
+      }
+    }
+    &.const {
+      color: #FFFFFF;
+      a.orange {
+        color: $skinVs;
+        > span {
+          &.full {
+
+          }
+          &.short {
+            display: none;
+          }
+        }
+      }
+      span {
+        &.purple {
+          color: $purpleVs;
+        }
+        &.green {
+          color: $greenBb;
+        }
+      }
+    }
+  }
+  @media #{$x-md} {
+    > h2 {
+      font-size: 55px;
+      min-height: 72px;
+    }
+    > h3 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+  @media #{$sm} {
+    p {
+      font-size: 16px;
+    }
+  }
+  @media #{$x-sm} {
+    margin-top: 30px;
+    > h3 {
+      font-size: 25px;
+    }
+    p {
+      &.comment {
+        font-size: 11px;
+        &.pressX {
+          display: none;
+        }
+      }
+      &.const {
+        font-size: 13px;
+        a.orange {
+          > span {
+            &.full {
+              display: none;
+            }
+            &.short {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.homeImagesWrapper {
+  .homeImages {
+    display: flex;
+    height: 100%;
+    position: relative;
+    .homeLand2 {
+      position: absolute;
+      left: -30px;
+      top: 55px;
+    }
+    .homeLand3 {
+      position: absolute;
+      right: -20px;
+      top: 140px;
+    }
+  }
+  @media #{$md} {
+    position: absolute;
+    right: -25px;
+  }
+}
+

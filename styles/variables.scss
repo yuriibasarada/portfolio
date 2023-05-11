@@ -1,0 +1,39 @@
+// Colors
+$blackVs: #070707;
+$blueVsBackground: #011221;
+$grey: #607B96;
+$grey50: #607B96;
+$greenBb: #43D9AD;
+$skinVs: #E99287;
+$blueGrey: #1E2D3D;
+$purpleVs: #4D5BCE;
+$purpleVsVivido: #7000FF;
+
+// font-size
+$headline: 40px;
+$subHeadline: 22px;
+$bodyText: 16px;
+$labels: 14px;
+$codeSnippets: 12px;
+
+// screen
+$x-lg: "screen and (max-width: 1620px)";
+$lg: "screen and (max-width: 1440px)";
+$x-md: "screen and (max-width: 1336px)";
+$xs-md: "screen and (max-width: 1064px)";
+$md: "screen and (max-width: 976px)";
+$sm: "screen and (max-width: 768px)";
+$x-sm: "screen and (max-width: 576px)";
+$xx-sm: "screen and (max-width: 375px)";
+
+//mixins
+
+@mixin menu-link {
+  font-size: $bodyText;
+  color: $grey50;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  &:hover {
+    color: #E5E9F0;
+  }
+}

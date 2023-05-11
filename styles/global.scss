@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 450;
+}
+
+body {
+  font-size: $bodyText;
+  font-weight: 450;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  > main {
+    flex: 1 1 auto;
+  }
+}
+
+.container {
+  margin: auto;
+  @media (min-width: 0px) {
+    padding: 0 20px;
+  }
+  @media (min-width: 768px) {
+    padding: 0 40px;
+  }
+  @media (min-width: 976px) {
+
+  }
+
+  @media (min-width: 1336px) {
+    padding: 0 70px;
+  }
+}
+
+div.Typewriter {
+  color: #E5E9F0;
+}

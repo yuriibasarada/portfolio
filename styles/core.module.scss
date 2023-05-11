@@ -1,0 +1,204 @@
+@mixin scaleQuestionMixin($delay: 0) {
+  animation-delay: $delay;
+  animation-duration: 2s;
+  animation-name: scaleQuestion;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.button {
+  border-radius: 30px;
+  border: 1px solid $greenBb;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 8px 20px;
+  text-decoration: underline;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  > svg {
+    margin-right: 8px;
+  }
+}
+
+
+.tubo {
+  position: absolute;
+  left: -40px;
+  bottom: -15px;
+
+  > div {
+    position: relative;
+
+    > img {
+      &:first-child {
+        position: relative;
+        z-index: 3;
+      }
+
+      &:last-child {
+        position: absolute;
+        top: 0;
+        left: 80px;
+        z-index: 0;
+      }
+    }
+  }
+  @media #{$x-sm} {
+    bottom: -100px;
+  }
+}
+
+.computerImages {
+  position: relative;
+  margin-top: 170px;
+  margin-right: 4vw;
+
+  .land {
+  }
+
+  .computer {
+    position: absolute;
+    left: -33px;
+    top: -82px;
+  }
+
+  .questionLeft {
+    position: absolute;
+    left: 143px;
+    top: 46px;
+    @include scaleQuestionMixin(0s);
+  }
+
+  .questionCenter {
+    position: absolute;
+    left: 200px;
+    top: -85px;
+    @include scaleQuestionMixin(1s);
+  }
+
+  .questionRight {
+    position: absolute;
+    right: 120px;
+    top: -52px;
+    @include scaleQuestionMixin(0.5s);
+  }
+
+  @media #{$x-md} {
+    margin-top: 230px;
+    > .land {
+      width: 430px;
+      height: 400px;
+    }
+    > .computer {
+      top: -66px;
+      width: 410px;
+      height: 388px;
+    }
+    > .questionLeft {
+      width: 40px;
+      height: 40px;
+      left: 114px;
+    }
+    > .questionCenter {
+      width: 40px;
+      height: 40px;
+      left: 155px;
+      top: -70px;
+    }
+    > .questionRight {
+      width: 40px;
+      height: 40px;
+      right: 110px;
+      top: -37px;
+    }
+  }
+  @media screen and (max-width: 1160px) {
+    margin-right: 0;
+  }
+  @media #{$xs-md} {
+    > .land {
+      width: 350px;
+      height: 326px;
+    }
+    > .computer {
+      width: 330px;
+      height: 312px;
+      top: -50px;
+      left: -26px;
+    }
+    > .questionLeft {
+      width: 30px;
+      height: 30px;
+      left: 90px;
+      top: 35px;
+    }
+    > .questionCenter {
+      width: 30px;
+      height: 30px;
+      top: -50px;
+      left: 125px;
+    }
+    > .questionRight {
+      width: 30px;
+      height: 30px;
+      right: 92px;
+      top: -27px;
+    }
+  }
+  @media #{$md} {
+    margin-top: 130px;
+    > .land {
+      width: 300px;
+      height: 280px;
+    }
+    > .computer {
+      width: 290px;
+      height: auto;
+      left: -20px;
+      top: -45px;
+    }
+    > .questionLeft {
+      width: 25px;
+      height: 25px;
+      left: 85px;
+      top: 32px;
+    }
+    > .questionCenter {
+      width: 25px;
+      height: 25px;
+      top: -40px;
+      left: 115px;
+    }
+    > .questionRight {
+      width: 25px;
+      height: 25px;
+      right: 73px;
+      top: -21px;
+    }
+  }
+  @media #{$sm} {
+    display: none;
+  }
+}
+
+@keyframes scaleQuestion {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

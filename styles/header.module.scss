@@ -1,0 +1,61 @@
+.header {
+  padding-top: 20px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex: 0 1 auto;
+  > nav.navigationDesktop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $blueGrey;
+    > a {
+      @include menu-link;
+    }
+    > ul {
+      display: flex;
+      align-items: center;
+      > li {
+        min-width: 200px;
+        max-width: 200px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &:not(:last-child) {
+          border-right: 1px solid $blueGrey;;
+        }
+        &.active {
+          color: white;
+          > a {
+            color: white;
+          }
+        }
+        > a {
+          @include menu-link;
+        }
+      }
+    }
+  }
+
+  @media #{$xs-md} {
+    padding-top: 10px;
+    > nav.navigationDesktop {
+      > ul {
+        > li {
+          min-width: 150px;
+          max-width: 150px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+  @media #{$xs-md} {
+    > nav.navigationDesktop {
+      > ul {
+        display: none;
+      }
+    }
+  }
+}
