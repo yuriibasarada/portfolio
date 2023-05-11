@@ -2,8 +2,13 @@ import styles from '@/styles/burger.module.scss'
 
 import Link from "next/link";
 import {usePathname} from "next/navigation";
+import {IMenuItem} from "@/utils/@types/Interfaces";
 
-export const Burger = ({menu}) => {
+interface Props {
+  menu: IMenuItem[]
+}
+
+export const Burger = ({menu}: Props) => {
   const pathname = usePathname()
   return (
     <div className={styles.burger} role='navigation'>

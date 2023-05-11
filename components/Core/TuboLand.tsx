@@ -1,6 +1,8 @@
 import Image from "next/image";
-
-export const TuboLand = (props) => {
+interface IProps {
+  className?: string
+}
+export const TuboLand = (props: IProps) => {
   return (
     <div {...props}>
       <div>

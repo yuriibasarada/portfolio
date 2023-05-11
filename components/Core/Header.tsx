@@ -4,9 +4,10 @@ import Link from 'next/link'
 import styles from '@/styles/header.module.scss'
 import { usePathname } from 'next/navigation'
 import {Burger} from "@/components/Core/Burger";
+import {IMenuItem} from "@/utils/@types/Interfaces";
 
 export const Header = () => {
-  const menu = [
+  const menu: IMenuItem[] = [
     {name: '_Hello', path: '/'},
     {name: '_projects', path: '/projects'},
     {name: '_about-me', path: '/about-me'},

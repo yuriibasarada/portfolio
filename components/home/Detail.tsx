@@ -26,7 +26,7 @@ export const Detail = () => {
           }}
         />
       </h2>
-      <h3>> Full Stack developer</h3>
+      <h3>`{'>'}` Full Stack developer</h3>
       <p className={`${styles.comment} ${styles.pressX}`}>// welcome to my portfolio, press X</p>
       <p className={styles.comment}>// you can also see my projects on my Github page</p>
       <p className={styles.const}>
