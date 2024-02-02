@@ -27,7 +27,7 @@ export const Detail = () => {
         />
       </h2>
       <h3>{'>'} Full Stack developer</h3>
-      <p className={`${styles.comment} ${styles.pressX}`}>// welcome to my portfolio, press X</p>
+      <p className={`${styles.comment} ${styles.pressX}`}>// welcome to my portfolio</p>
       <p className={styles.comment}>// you can also see my projects on my Github page</p>
       <p className={styles.const}>
         <span className={styles.purple}>const </span>
@@ -37,7 +37,7 @@ export const Detail = () => {
           <span className={styles.short}> “@yuriibasarada”</span>
         </a>
       </p>
-      <Button style={{marginTop: '40px'}}>
+      <Button onClick={() => window.open('/resume.pdf', '_target')} style={{marginTop: '40px'}}>
         <IDownload />
         resume
       </Button>
