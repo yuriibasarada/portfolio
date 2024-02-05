@@ -1,9 +1,9 @@
 import '@/styles/global.scss'
 import styles from '@/styles/layout.module.scss'
-import { Fira_Code } from 'next/font/google'
+import {Fira_Code} from 'next/font/google'
 import {Header} from "@/components/Core/Header";
 
-const firaCode = Fira_Code({ subsets: ['latin'] })
+const firaCode = Fira_Code({subsets: ['latin']})
 
 export const metadata = {
   title: 'Yurii Basarada: Web Developer',
@@ -14,18 +14,18 @@ export const metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode
 }) {
   return (
     <html className={styles.layout} lang="en">
-      <body className={firaCode.className}>
-      <Header />
-      <main>
-          {children}
-        </main>
-      </body>
+    <body className={firaCode.className}>
+    <Header/>
+    <main>
+      {children}
+    </main>
+    </body>
     </html>
   )
 }

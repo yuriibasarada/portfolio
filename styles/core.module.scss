@@ -30,32 +30,6 @@
 }
 
 
-.tubo {
-  position: absolute;
-  left: -40px;
-  bottom: -15px;
-
-  > div {
-    position: relative;
-
-    > img {
-      &:first-child {
-        position: relative;
-        z-index: 3;
-      }
-
-      &:last-child {
-        position: absolute;
-        top: 0;
-        left: 80px;
-        z-index: 0;
-      }
-    }
-  }
-  @media #{$x-sm} {
-    bottom: -100px;
-  }
-}
 
 .computerImages {
   position: relative;

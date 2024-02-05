@@ -1,5 +1,4 @@
 import styles from '@/styles/home.module.scss'
-import coreStyle from '@/styles/core.module.scss'
 import Typewriter from 'typewriter-effect';
 import {Button} from "@/components/Core/Button";
 import {IDownload} from "@/components/svg/IDownload";
@@ -15,7 +14,7 @@ export const Detail = () => {
         height={85}
         alt='Yurii Basarada resume'
       />
-      <TuboLand className={coreStyle.tubo} />
+      <TuboLand className={styles.tubo} />
       <h1>Hi all. I am</h1>
       <h2>
         <Typewriter

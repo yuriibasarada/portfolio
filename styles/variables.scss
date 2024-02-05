@@ -28,6 +28,11 @@ $xx-sm: "screen and (max-width: 375px)";
 
 //mixins
 
+@mixin center-absolute {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 @mixin menu-link {
   font-size: $bodyText;
   color: $grey50;

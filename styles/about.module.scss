@@ -1,0 +1,400 @@
+.aboutWrapper {
+  position: relative;
+  height: 100%;
+
+  > div.headBlock {
+    display: flex;
+  }
+
+  .tubo {
+    position: absolute;
+    left: -40px;
+    bottom: -60px;
+
+    > div {
+      position: relative;
+
+      > img {
+        &:first-child {
+          position: relative;
+          z-index: 3;
+        }
+
+        &:last-child {
+          position: absolute;
+          top: 0;
+          left: 40px;
+          z-index: 0;
+        }
+      }
+    }
+
+    @media #{$x-sm} {
+      bottom: -100px;
+    }
+  }
+
+  .leftLend {
+    position: absolute;
+    left: 10px;
+    top: 380px;
+  }
+
+  .rightLend {
+    position: absolute;
+    z-index: 2;
+    bottom: 50%;
+    right: 40px;
+    @media #{$x-md} {
+      right: 20px;
+    }
+    @media #{$sm} {
+      z-index: 4;
+      right: 0px;
+    }
+    @media #{$x-sm} {
+      z-index: 3;
+    }
+  }
+
+  .code1 {
+    right: 100px;
+    bottom: 210px;
+
+    img {
+      width: 280px;
+      height: auto;
+    }
+  }
+
+  .code2 {
+    bottom: 155px;
+    right: -50px;
+
+    img {
+      height: auto;
+      width: 330px;
+    }
+  }
+
+  .code3 {
+    bottom: 115px;
+    right: 290px;
+
+    img {
+      height: auto;
+      width: 200px;
+    }
+  }
+
+}
+
+.mainInfo {
+  position: relative;
+  z-index: 2;
+  background: rgba(1, 18, 33, 0.8);
+  width: 100%;
+  padding: 20px 40px 20px 70px;
+  border: 1px solid $blueGrey;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin-top: 10px;
+  list-style-type: decimal;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #607B96;
+
+  > ol {
+    > li {
+      list-style-type: decimal;
+      white-space: nowrap;
+
+      &::marker {
+        content: counter(list-item) "\a0\a0";
+      }
+
+      &:first-child {
+        > span {
+          &:nth-child(1) {
+            color: $purpleVs;
+          }
+
+          &:nth-child(2) {
+            color: $greenBb;
+          }
+
+          &:nth-child(3) {
+            color: $purpleVs;
+          }
+
+          &:nth-child(4) {
+            color: $skinVs;
+          }
+        }
+      }
+
+      &.comment {
+        display: none;
+      }
+    }
+  }
+
+  @media #{$x-md} {
+    padding: 20px 40px 20px 40px;
+    > ol {
+      > li {
+        white-space: break-spaces;
+
+        &::marker {
+          content: '';
+        }
+
+        &:not(:first-child) {
+          display: none;
+        }
+
+        &.comment {
+          display: list-item;
+        }
+
+      }
+    }
+  }
+  @media #{$sm} {
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 4;
+    font-size: 16px;
+  }
+  @media #{$x-sm} {
+    line-height: 1.2;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.aboutHead {
+  width: 100%;
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  @media #{$md} {
+    margin-top: 32px;
+  }
+  @media #{$x-sm} {
+    margin-top: 12px;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    color: $grey;
+    font-size: 21px;
+    line-height: 100%;
+    margin-bottom: 13px;
+    @media #{$sm} {
+      font-size: 17px;
+    }
+    @media #{$x-sm} {
+      display: none;
+    }
+
+    > span {
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        margin-right: 40px;
+        @media #{$md} {
+          margin-right: 20px;
+        }
+      }
+
+      > svg {
+        margin-right: 8px;
+        width: 25px;
+        height: 25px;
+        @media #{$sm} {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.person {
+  display: flex;
+  max-height: 100px;
+
+  > .picture {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    @media #{$x-sm} {
+      width: 85px;
+      height: 85px;
+    }
+    &:hover {
+      animation-play-state: paused;
+
+      > .border {
+        animation-play-state: paused;
+      }
+    }
+
+    > .gradient {
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    > .borderWrap {
+      border: 2.8px solid white;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      z-index: 1;
+      @include center-absolute;
+    }
+
+    > img.personPicture {
+      height: 75px;
+      width: 75px;
+      color: transparent;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 4;
+      @include center-absolute;
+    }
+
+    > .border {
+      z-index: 3;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      animation-name: border-cycle;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 4.4px);
+        height: calc(100% - 4.4px);
+        border: 2px solid transparent;
+        border-top-color: $greenBb;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  > .info {
+    margin-left: 25px;
+    display: inline-block;
+    align-self: flex-end;
+    @media #{$sm} {
+      margin-left: 15px;
+    }
+
+    > span {
+      display: block;
+      line-height: 100%;
+
+      &.name {
+        font-size: 24px;
+        color: $purpleVs;
+        font-weight: bold;
+        margin-bottom: 13px;
+        @media #{$sm} {
+          font-size: 20px;
+        }
+      }
+
+      &.sub {
+        color: $grey;
+        font-size: 19px;
+        margin-bottom: 13px;
+        @media #{$sm} {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+.codeBlock {
+  position: absolute;
+
+  > div {
+    position: relative;
+
+    > .codeIcons {
+      color: $grey;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+
+      > span {
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+          margin-right: 8px;
+        }
+
+        > svg {
+          height: 8px;
+          width: 9px;
+          margin-right: 2px;
+        }
+
+        > sub {
+          font-size: 6px;
+        }
+      }
+    }
+
+    > .codeImageBlock {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@keyframes border-cycle {
+  from {
+    transform: rotate(0turn);
+    -ms-transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

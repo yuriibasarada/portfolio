@@ -20,7 +20,7 @@ export const Header = () => {
 
   return ( <header className={`${styles.header} container`}>
       <nav className={styles.navigationDesktop}>
-        <Link href='/profile' className={pathname === '/profile' ? styles.active : ''}>
+        <Link href='/portfolio' className={pathname === '/portfolio' ? styles.active : ''}>
           {name}
         </Link>
         <Burger menu={menu} />
