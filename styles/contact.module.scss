@@ -1,4 +1,10 @@
-@import 'core.module';
+@mixin scaleQuestionMixin($delay: 0) {
+  animation-delay: $delay;
+  animation-duration: 2s;
+  animation-name: scaleQuestion;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 .contactWrapper {
   position: relative;
@@ -328,6 +334,16 @@
     }
 
   }
+}
 
-
+@keyframes scaleQuestion {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
