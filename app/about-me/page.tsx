@@ -14,15 +14,15 @@ export default function About() {
       <MainInfo />
 
       <CodeBlock stars={3} style={styles.code1}>
-        <Image className={styles.code1} src='/assets/images/code1.png' alt='TypeScript code example'
+        <Image src='/assets/images/code1.png' alt='TypeScript code example'
                width={280} height={90} />
       </CodeBlock>
       <CodeBlock stars={3} style={styles.code2}>
-        <Image className={styles.code1} src='/assets/images/code2.png' alt='TypeScript code example'
+        <Image src='/assets/images/code2.png' alt='TypeScript code example'
                width={330} height={80} />
       </CodeBlock>
       <CodeBlock stars={3} style={styles.code3}>
-        <Image className={styles.code1} src='/assets/images/code3.png' alt='TypeScript code example'
+        <Image src='/assets/images/code3.png' alt='TypeScript code example'
                width={200} height={65} />
       </CodeBlock>
 

@@ -23,7 +23,7 @@ export const Header = () => {
         <Link href='/portfolio' className={pathname === '/portfolio' ? styles.active : ''}>
           {name}
         </Link>
-        <Burger menu={menu} />
+        <Burger  menu={menu}/>
         <ul>
           {menu.map(link => (
             <li key={link.name} className={pathname === link.path ? styles.active : ''}>

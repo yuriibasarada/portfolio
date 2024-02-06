@@ -3,6 +3,7 @@ import styles from '@/styles/burger.module.scss'
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {IMenuItem} from "@/utils/@types/Interfaces";
+import {Dispatch, SetStateAction, useState} from "react";
 
 interface Props {
   menu: IMenuItem[]
@@ -10,11 +11,13 @@ interface Props {
 
 export const Burger = ({menu}: Props) => {
   const pathname = usePathname()
+  const [checked, check] = useState(false)
+
   return (
     <div className={styles.burger} role='navigation'>
       <div>
 
-        <input type="checkbox"/>
+        <input onChange={() => check(!checked)} type="checkbox" checked={checked}/>
 
         <span />
         <span />
@@ -22,7 +25,7 @@ export const Burger = ({menu}: Props) => {
 
         <ul>
           {menu.map(link => (
-            <li key={link.name} className={pathname === link.path ? styles.active : ''}>
+            <li onClick={() => check(false)} key={link.name} className={pathname === link.path ? styles.active : ''}>
               <Link href={link.path}>{link.name}</Link>
             </li>
           ))}

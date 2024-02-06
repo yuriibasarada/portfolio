@@ -182,6 +182,7 @@
   @media #{$x-sm} {
     margin-top: 12px;
   }
+
   .icons {
     display: flex;
     align-items: center;
@@ -225,7 +226,7 @@
   display: flex;
   max-height: 100px;
 
-  > .picture {
+  > a.picture {
     width: 100px;
     height: 100px;
     position: relative;
@@ -233,6 +234,7 @@
       width: 85px;
       height: 85px;
     }
+
     &:hover {
       animation-play-state: paused;
 
@@ -261,8 +263,8 @@
     }
 
     > img.personPicture {
-      height: 75px;
-      width: 75px;
+      height: 85px;
+      width: 85px;
       color: transparent;
       object-fit: cover;
       object-position: center;
@@ -270,6 +272,10 @@
       position: absolute;
       z-index: 4;
       @include center-absolute;
+      @media #{$x-sm} {
+        height: 75px;
+        width: 75px;
+      }
     }
 
     > .border {
@@ -304,23 +310,39 @@
     margin-left: 25px;
     display: inline-block;
     align-self: flex-end;
+
+    &.noDate {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
     @media #{$sm} {
       margin-left: 15px;
+    }
+
+    a.name {
+      display: block;
+      font-size: 24px;
+      color: $purpleVs;
+      font-weight: bold;
+      margin-bottom: 13px;
+      line-height: 100%;
+
+      &.noMargin {
+        margin-bottom: 0;
+        text-decoration: underline;
+      }
+
+      @media #{$sm} {
+        font-size: 20px;
+      }
     }
 
     > span {
       display: block;
       line-height: 100%;
 
-      &.name {
-        font-size: 24px;
-        color: $purpleVs;
-        font-weight: bold;
-        margin-bottom: 13px;
-        @media #{$sm} {
-          font-size: 20px;
-        }
-      }
 
       &.sub {
         color: $grey;
@@ -369,7 +391,7 @@
     }
 
     > .codeImageBlock {
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 20px #00000026;
     }
   }
 }

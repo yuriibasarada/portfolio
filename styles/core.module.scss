@@ -36,9 +36,6 @@
   margin-top: 170px;
   margin-right: 4vw;
 
-  .land {
-  }
-
   .computer {
     position: absolute;
     left: -33px;
@@ -61,7 +58,7 @@
 
   .questionRight {
     position: absolute;
-    right: 120px;
+    left: 350px;
     top: -52px;
     @include scaleQuestionMixin(0.5s);
   }
@@ -91,7 +88,7 @@
     > .questionRight {
       width: 40px;
       height: 40px;
-      right: 110px;
+      left: 280px;
       top: -37px;
     }
   }
@@ -124,7 +121,7 @@
     > .questionRight {
       width: 30px;
       height: 30px;
-      right: 92px;
+      left: 230px;
       top: -27px;
     }
   }
@@ -155,7 +152,7 @@
     > .questionRight {
       width: 25px;
       height: 25px;
-      right: 73px;
+      left: 200px;
       top: -21px;
     }
   }
