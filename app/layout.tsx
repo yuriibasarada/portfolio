@@ -27,9 +27,20 @@ export const metadata = {
   openGraph: {
     title: 'Yurii Basarada: Web Developer',
     description: 'Web Developer Yurii Basarada PHP/JS',
-    url: 'https://yuriibasarada.com',
+    url: process.env.URL,
     siteName: 'yuriibasarada',
-    image: 'https://yuriibasarada.com/images/screenshot3.jpg',
+    images: [
+      {
+        url: `${process.env.URL}/images/screenshot3.jpg.`,
+        width: 800,
+        height: 600,
+      },
+      {
+        url: `${process.env.URL}/images/screenshot4.jpg.`,
+        width: 1800,
+        height: 1600,
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
