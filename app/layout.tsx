@@ -31,12 +31,12 @@ export const metadata = {
     siteName: 'yuriibasarada',
     images: [
       {
-        url: `${process.env.URL}/images/screenshot3.jpg.`,
+        url: `${process.env.URL}/images/screenshot3.jpg`,
         width: 800,
         height: 600,
       },
       {
-        url: `${process.env.URL}/images/screenshot4.jpg.`,
+        url: `${process.env.URL}/images/screenshot4.jpg`,
         width: 1800,
         height: 1600,
       },
