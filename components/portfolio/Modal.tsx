@@ -24,16 +24,16 @@ export const Modal = ({project, close}: iProps) => {
           <ul className={styles.images}>
             <li>
               <span>// _desktop</span>
-              <Image width={350} height={150} src={`/assets/images/portfolio/${project?.name}/desktop.png`}
+              <Image width={350} height={150} src={`/assets/images/portfolio/${project?.name}/desktop.jpg`}
                      alt={`desktop ${project?.title}`}/></li>
             <li><span>// _tablet</span><Image width={350} height={150}
-                                            src={`/assets/images/portfolio/${project?.name}/tablet.png`}
+                                            src={`/assets/images/portfolio/${project?.name}/tablet.jpg`}
                                             alt={`desktop ${project?.title}`}/></li>
             <li><span>// _mobile</span><Image width={350} height={150}
-                                            src={`/assets/images/portfolio/${project?.name}/mobile.png`}
+                                            src={`/assets/images/portfolio/${project?.name}/mobile.jpg`}
                                             alt={`desktop ${project?.title}`}/></li>
             {project?.has_metrics && <li><span>// _metrics</span>
-              <Image width={350} height={150} src={`/assets/images/portfolio/${project?.name}/metrics.png`}
+              <Image width={350} height={150} src={`/assets/images/portfolio/${project?.name}/metrics.jpg`}
                      alt={`desktop ${project?.title}`}/></li>}
           </ul>
         </div>

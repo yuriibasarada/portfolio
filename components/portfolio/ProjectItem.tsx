@@ -17,7 +17,7 @@ export const ProjectItem = ({project, index, onClick}: iProps) => {
       <div className={styles.body} onClick={() => onClick(index)}>
         <Image className={styles.tag} src={`/assets/images/tags/${project.tag}.png`} alt={project.tag} height={30} width={30}/>
         <div className={styles.img}>
-          <Image src={`/assets/images/portfolio/${project.name}/desktop.png`} alt={project.title} width={350} height={150}/>
+          <Image src={`/assets/images/portfolio/${project.name}/desktop.jpg`} alt={project.title} width={350} height={150}/>
         </div>
         <div className={styles.description}>
           <p>{project.short_description}</p>

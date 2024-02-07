@@ -28,7 +28,7 @@ export default async function Skills() {
              width={200} height={136} />
       <Image className={styles.tubo} src='/assets/images/tubo.png' alt='Land tubo' width='84' height='94' />
 
-      <Image className={styles.land} src='/assets/images/land_1.png' alt='Land computer' width='300' height='233' />
+      <Image className={styles.land} src='/assets/images/land_computer.png' alt='Land computer' width='300' height='233' />
 
     </div>
   )

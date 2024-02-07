@@ -9,7 +9,11 @@
   .tubo {
     position: absolute;
     left: -40px;
-    bottom: -60px;
+    bottom: -105px;
+
+    @media #{$x-sm} {
+      bottom: -150px;
+    }
 
     > div {
       position: relative;
@@ -27,10 +31,6 @@
           z-index: 0;
         }
       }
-    }
-
-    @media #{$x-sm} {
-      bottom: -100px;
     }
   }
 
