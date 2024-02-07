@@ -5,6 +5,7 @@ import styles from '@/styles/header.module.scss'
 import { usePathname } from 'next/navigation'
 import {Burger} from "@/components/Core/Burger";
 import {IMenuItem} from "@/utils/@types/Interfaces";
+import {useState} from "react";
 
 export const Header = () => {
   const menu: IMenuItem[] = [
@@ -18,12 +19,15 @@ export const Header = () => {
 
   const name = `<YuriiBasarada />`
 
+  const [checked, check] = useState(false)
+
   return ( <header className={`${styles.header} container`}>
       <nav className={styles.navigationDesktop}>
-        <Link href='/portfolio' className={pathname === '/portfolio' ? styles.active : ''}>
+        <Link onClick={() => check(false)} href='/portfolio' className={pathname === '/portfolio' ? styles.active : ''}>
           {name}
         </Link>
-        <Burger  menu={menu}/>
+        {pathname}
+        <Burger check={check} checked={checked}  menu={menu}/>
         <ul>
           {menu.map(link => (
             <li key={link.name} className={pathname === link.path ? styles.active : ''}>

@@ -7,11 +7,12 @@ import {Dispatch, SetStateAction, useState} from "react";
 
 interface Props {
   menu: IMenuItem[]
+  check: Dispatch<SetStateAction<boolean>>,
+  checked: boolean
 }
 
-export const Burger = ({menu}: Props) => {
+export const Burger = ({check, checked, menu}: Props) => {
   const pathname = usePathname()
-  const [checked, check] = useState(false)
 
   return (
     <div className={styles.burger} role='navigation'>

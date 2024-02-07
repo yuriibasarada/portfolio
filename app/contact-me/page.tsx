@@ -4,7 +4,7 @@ import {ComputerImages} from "@/components/Core/ComputerImages";
 import {Person} from "@/components/about/Person";
 import {Main} from "@/components/contact/Main";
 
-export default function About() {
+export default function ContactMe() {
   return (
     <div className={styles.contactWrapper}>
       <div className="container">
