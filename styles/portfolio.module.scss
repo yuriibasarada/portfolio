@@ -16,7 +16,7 @@
     > .skills {
       width: 100%;
       position: relative;
-      z-index: 4;
+      z-index: 3;
 
       @media #{$md} {
         margin-left: -15px;
@@ -111,7 +111,7 @@
     left: -10px;
     width: 130px;
     height: auto;
-    z-index: 3;
+    z-index: 2;
     @media #{$xs-md} {
       width: 100px;
       left: -40px;
