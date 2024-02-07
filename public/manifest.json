@@ -1,12 +1,26 @@
 {
     "theme_color": "#5565E8",
     "background_color": "#011221",
-    "display": "browser",
+    "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "name": "Yurii Basarada",
     "short_name": "yuriibasarada",
     "description": "Web Developer Yurii Basarada",
+    "screenshots": [
+        {
+            "src": "screenshot1.png",
+            "type": "image/png",
+            "sizes": "540x720",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshot2.jpg",
+            "type": "image/jpg",
+            "sizes": "720x540",
+            "form_factor": "wide"
+        }
+    ],
     "icons": [
         {
             "src": "/icon-192x192.png",
