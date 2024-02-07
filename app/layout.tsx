@@ -2,7 +2,6 @@ import '@/styles/global.scss'
 import styles from '@/styles/layout.module.scss'
 import {Fira_Code} from 'next/font/google'
 import {Header} from "@/components/Core/Header";
-
 const firaCode = Fira_Code({subsets: ['latin']})
 
 // @ts-ignore
@@ -32,24 +31,11 @@ export const metadata = {
     images: [
       {
         url: `${process.env.URL}/images/screenshot3.jpg`,
-        width: 800,
-        height: 600,
-        type: 'image/jpeg',
-        alt: 'Yurii Basarada Website medium'
-      },
-      {
-        url: `${process.env.URL}/images/screenshot4.jpg`,
-        width: 1800,
-        height: 1600,
-        type: 'image/jpeg',
-        alt: 'Yurii Basarada Website large'
-      },
-      {
-        url: `${process.env.URL}/images/icon-300x300.png`,
+        secureUrl: `${process.env.URL}/images/screenshot3.jpg`,
         width: 300,
         height: 300,
-        type: 'image/png',
-        alt: 'Yurii Basarada Website small'
+        type: 'image/jpeg',
+        alt: 'Yurii Basarada Website'
       },
     ],
     locale: 'en_US',
