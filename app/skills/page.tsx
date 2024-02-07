@@ -1,21 +1,21 @@
 'use server'
 
-import styles from "@/styles/portfolio.module.scss";
+import styles from "@/styles/skills.module.scss";
 import Image from "next/image";
 import {Person} from "@/components/about/Person";
-import {Skills} from "@/components/porfolio/Skills";
+import {SkillsBlock} from "@/components/skills/SkillsBlock";
 import {getSkills} from "@/app/actions";
 
-export default async function Portfolio() {
+export default async function Skills() {
   const skills = await getSkills();
 
   return (
-    <div className={styles.portfolioWrapper}>
+    <div className={styles.skillsWrapper}>
       <div className="container">
 
         <Person className={styles.person} showDate={false}  />
 
-        <Skills skills={skills} />
+        <SkillsBlock skills={skills} />
 
       </div>
 

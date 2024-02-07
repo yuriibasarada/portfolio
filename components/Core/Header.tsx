@@ -23,7 +23,7 @@ export const Header = () => {
 
   return ( <header className={`${styles.header} container`}>
       <nav className={styles.navigationDesktop}>
-        <Link onClick={() => check(false)} href='/portfolio' className={pathname === '/portfolio' ? styles.active : ''}>
+        <Link onClick={() => check(false)} href='/skills' className={pathname === '/skills' ? styles.active : ''}>
           {name}
         </Link>
         {pathname}

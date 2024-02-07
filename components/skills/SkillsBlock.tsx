@@ -1,4 +1,4 @@
-import styles from '@/styles/portfolio.module.scss'
+import styles from '@/styles/skills.module.scss'
 import React from "react";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ interface IProps {
   }[]
 }
 
-export const Skills = ({skills}: IProps) => {
+export const SkillsBlock = ({skills}: IProps) => {
   return (
     <div className={styles.skills}>
       <span>_Skills</span>
