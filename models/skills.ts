@@ -4,15 +4,14 @@ import {Schema, model, models} from 'mongoose'
 const SkillSchema =  new Schema({
     img: {
         type: String,
-        unique: [true, 'Email is unique'],
-        equired: [true, 'Email is required'],
+        required: [true, 'Img is required'],
     },
     name: {
         type: String,
-        require: [true, 'Username is required']
+        require: [true, 'Name is required']
     }
 })
 
-const Skill = models.User || model('Skill', SkillSchema)
+const Skill = models.Skill || model('Skill', SkillSchema)
 
 export default Skill

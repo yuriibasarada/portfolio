@@ -23,6 +23,11 @@
         margin-right: -15px;
         width: calc(100% + 30px);
       }
+      @media #{$x-sm} {
+        margin-left: -12px;
+        margin-right: -12px;
+        width: calc(100% + 24px);
+      }
       @media #{$xx-sm} {
         margin-left: -8px;
         margin-right: -8px;
@@ -64,6 +69,14 @@
             margin-right: 15px;
             margin-bottom: 30px;
           }
+
+
+          @media #{$x-sm} {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-bottom: 24px;
+          }
+
           @media #{$xx-sm} {
             margin-left: 8px;
             margin-right: 8px;
