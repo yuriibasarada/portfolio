@@ -2,6 +2,11 @@
 const path = require('path');
 
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV !== "development",
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: `@import "variables.scss";`
@@ -24,6 +29,7 @@ const nextConfig = {
 
 const withPWA = require("next-pwa")({
   dest: "public",
+  disable: process.env.NODE_ENV === "development",
   register: true,
   skipWaiting: true,
 });
