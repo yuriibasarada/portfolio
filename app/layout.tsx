@@ -25,7 +25,7 @@ export const metadata = {
   ],
   openGraph: {
     title: 'Yurii Basarada: Web Developer',
-    description: 'Web Developer Yurii Basarada PHP/JS',
+    description: 'Web Developer with stack: PHP(Laravel)/JS(React/Vue)',
     url: process.env.URL,
     siteName: 'yuriibasarada',
     images: [
