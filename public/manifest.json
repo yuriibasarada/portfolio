@@ -9,13 +9,13 @@
     "description": "Web Developer Yurii Basarada",
     "screenshots": [
         {
-            "src": "screenshot1.jpg",
+            "src": "images/screenshot1.jpg",
             "type": "image/png",
             "sizes": "540x720",
             "form_factor": "narrow"
         },
         {
-            "src": "screenshot2.jpg",
+            "src": "images/screenshot2.jpg",
             "type": "image/jpg",
             "sizes": "720x540",
             "form_factor": "wide"
@@ -23,22 +23,22 @@
     ],
     "icons": [
         {
-            "src": "/icon-192x192.png",
+            "src": "images/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icon-256x256.png",
+            "src": "images/icon-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/icon-384x384.png",
+            "src": "images/icon-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "/icon-512x512.png",
+            "src": "images/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

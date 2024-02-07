@@ -18,12 +18,36 @@ export const metadata = {
       url: process.env.LINKEDIN
     },
   ],
-  viewport:
-    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
+  viewport: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
   icons: [
-    { rel: "apple-touch-icon", url: "icon-128x128.png" },
-    { rel: "icon", url: "icon-128x128.png" },
+    { rel: "apple-touch-icon", url: "images/icon-128x128.png" },
+    { rel: "icon", url: "images/icon-128x128.png" },
   ],
+  openGraph: {
+    title: 'Yurii Basarada: Web Developer',
+    description: 'Web Developer Yurii Basarada PHP/JS',
+    url: 'https://yuriibasarada.com',
+    siteName: 'yuriibasarada',
+    images: [
+      {
+        url: 'https://yuriibasarada.com/images/screenshot3.jpg',
+        width: 1400,
+        height: 800,
+      },
+      {
+        url: 'https://yuriibasarada.com/images/screenshot4.jpg',
+        width: 800,
+        height: 700,
+      },
+      {
+        url: 'https://yuriibasarada.com/images/screenshot5.jpg',
+        width: 390,
+        height: 844,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
