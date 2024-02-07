@@ -10,7 +10,7 @@ import {useState} from "react";
 export const Header = () => {
   const menu: IMenuItem[] = [
     {name: '_Hello', path: '/'},
-    {name: '_projects', path: '/projects'},
+    {name: '_projects', path: '/portfolio'},
     {name: '_about-me', path: '/about-me'},
     {name: '_contact-me', path: '/contact-me'},
   ]

@@ -2,9 +2,14 @@ import styles from '@/styles/about.module.scss'
 import {Person} from '@/components/about/Person'
 import {IDetails} from "@/components/svg/IDetails";
 import {IStar} from "@/components/svg/IStar";
-export const Head = () => {
+
+interface IProps {
+  className?: string
+}
+
+export const Head = ({className= ''}) => {
   return (
-    <div className={styles.aboutHead}>
+    <div className={`${styles.aboutHead} ${className}`}>
       <Person />
       <div className={styles.icons}>
         <span>
