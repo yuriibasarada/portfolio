@@ -43,7 +43,7 @@
       > .portfolioBlock {
         display: flex;
         padding: 60px 20px 30px;
-        overflow: scroll;
+        overflow-x: scroll;
         box-sizing: content-box;
         @media #{$x-sm} {
           padding-left: 0;
